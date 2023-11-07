@@ -21,9 +21,13 @@ print('additional tile have to buy more {} pcs.'.format(buy_more))
 
 
 print('\n\n\n')
-print('Program tile calculation by Ama')
+print('Program tile calculation V.2 by Ama')
 
-tilecolor ={'red':100, 'gold':200, 'white':90}
+tilecolor ={'red':100, 'gold':200, 'white':90, 'grey':30 }
+
+print('-------Price of tile')
+for c,t in tilecolor.items():
+    print('Color: {} Price: {}'.format(c,t))
 try:
     tiles = int(input('How many tiles do you want to use: '))
     row = int(input('How many tiles per row: ')) # xx tiles per row
@@ -40,7 +44,6 @@ except:
 total_row = tiles // row
 remain_tiles = tiles % row
 
-#print(total_row, remain_tiles)
 
 if remain_tiles == 0:
     buy_more = 0
@@ -61,3 +64,5 @@ print('Total price for additional tiles: {} THB'.format(buy_more * tilecolor[col
 print('Total price for all tiles: {} THB'.format(total_tiles * tilecolor[color]))
 
 # How many additional tiles do you have to buy?
+
+print('-----------------------The End----------------------')
